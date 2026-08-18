@@ -1,7 +1,7 @@
 object gimenez{
 var fondoDeSueldo = 300000 
 method pagoDeSueldo() {
-  fondoDeSueldo = fondoDeSueldo - 
+  fondoDeSueldo = fondoDeSueldo - sueldoBaigorria() - 
 }
 }
 
@@ -13,8 +13,12 @@ object galván{
 }
 
 object baigorria{
-    sueldoBg = (ventaTotalDeEmpanadas()*15)
-    method empanadasVendidas() {
-      
+    var sueldoBg = self.sueldoBaigorria()
+    var ventaTotalDeEmpanadas = 0
+    method empanadasVendidas(){
+        return ventaTotalDeEmpanadas
+    } 
+    method sueldoBaigorria() {
+      return ( self.empanadasVendidas() * 15)
     }
 }
