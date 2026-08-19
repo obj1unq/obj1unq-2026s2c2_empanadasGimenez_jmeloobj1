@@ -1,46 +1,43 @@
 object gimenez{
-
-var fondoDeSueldo = 300000 
-
-method pagoDeSueldos() {
-  fondoDeSueldo = fondoDeSueldo - sueldoBaigorria() - 
-}
-
-method  importeActual() {
-  return fondoDeSueldo
-}
+var fondo  = 300000
+method pagarSueldo(empleado){
 
 }
 
-object galván{
-    
-    const sueldoGv = 15000    
-    
-    method actSueldoGv(nvSueldoGv){
-        sueldoGv =  nvSueldoGv
-    
-    } 
+}
+//TIPO POLIMORFICO BAIGORRIA Y GALVAN SON 2 EMPLEADOS
+//PREGUNTAR SI CADA DATO ES RECORDADO O CALCULADO
+object galvan{
+ var sueldo = 15000
+ var totalCobrado = 0
+ method sueldo(){
+  return sueldo
+ }
 
-    method sueldoGv() {
-      
-    }
+ method sueldo(_sueldo) {
+   sueldo = _sueldo
+ }   
+method cobrarSueldo(){
+ totalCobrado = totalCobrado + self.sueldo()
+}
 
+method totalCobrado(){
+
+}
 }
 
 object baigorria{
-    var sueldoBg = self.sueldoBaigorria()
-    
-    var ventaTotalDeEmpanadas = 0
-    
-    method  venderEmpanada() {
-    ventaTotalDeEmpanadas = ventaTotalDeEmpanadas + 1   
-    }
-    
-    method empanadasVendidas(){
-        return ventaTotalDeEmpanadas
-    } 
-    
-    method sueldoBaigorria() {
-      return ( self.empanadasVendidas() * 15)
-    }
+  var empanadasVendidas = 0
+  method vender(empanadas) {
+    empanadasVendidas = empanadasVendidas + empanadas
+  }
+  method sueldo() {
+    empanadasVendidas * self.precioPorEmpanada()
+  }
+  method precioPorEmpanada(){
+    return 15
+  }
+method cobrarSueldo(){
+  //lo va a cobrar igual
+}
 }
