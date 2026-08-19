@@ -1,7 +1,7 @@
 object gimenez{
 var fondo  = 300000
 method pagarSueldo(empleado){
-
+ fondo = fondo - galvan.sueldo() - baigorria.sueldo()
 }
 
 }
@@ -21,9 +21,7 @@ method cobrarSueldo(){
  totalCobrado = totalCobrado + self.sueldo()
 }
 
-method totalCobrado(){
 
-}
 }
 
 object baigorria{
@@ -39,5 +37,9 @@ object baigorria{
   }
 method cobrarSueldo(){
   //lo va a cobrar igual
+}
+
+method totalCobrado(){
+
 }
 }
